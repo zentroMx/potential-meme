@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlazeNode | Lightning Fast Hosting</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    * {margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0b0c10;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    section {
+      padding: 120px 60px;
+      text-align: center;
+    }
+
+    .hero {
+      height: 100vh;
+      background: radial-gradient(circle at top, rgba(155,93,229,0.15), transparent 60%), #0b0c10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-top: 15px;
+      max-width: 600px;
+    }
+
+    .hero a {
+      display: inline-block;
+      margin-top: 25px;
+      background: linear-gradient(90deg, #00ffff, #9b5de5);
+      color: #000;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .hero a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #9b5de5;
+    }
+
+    .plans {
+      background: #111;
+    }
+
+    .plans h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #9b5de5;
+      text-shadow: 0 0 10px #9b5de5;
+    }
+
+    .plan-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .card {
+      background: #0f0f12;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(155,93,229,0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(0,255,255,0.4);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      color: #00ffff;
+      margin-bottom: 15px;
+    }
+
+    .card ul {
+      list-style: none;
+      color: #ccc;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .card ul li {
+      margin-bottom: 8px;
+    }
+
+    .card a {
+      display: inline-block;
+      background: linear-gradient(90deg, #00ffff, #9b5de5);
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    .card a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #9b5de5;
+    }
+
+    footer {
+      background: #0b0c10;
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+      color: #aaa;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    footer a {
+      color: #00ffff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      color: #9b5de5;
+    }
+
+    @media (max-width: 768px) {
+      header {padding: 15px 25px;}
+      .hero h1 {font-size: 2.2rem;}
+      .hero p {font-size: 1rem;}
+      .plan-cards {flex-direction: column; align-items: center;}
+      .card {width: 90%;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="blazenode-logo.png" alt="BlazeNode Logo">
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#plans">Plans</a>
+      <a href="#about">About</a>
+      <a href="https://discord.gg/Hd8eedhS" target="_blank">Discord</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h1>⚡ BlazeNode</h1>
+    <p>Power Your Game Servers with Lightning Speed. Fast • Reliable • Affordable Hosting for Everyone.</p>
+    <a href="#plans">View Plans</a>
+  </section>
+
+  <section class="plans" id="plans">
+    <h2>Choose Your Plan</h2>
+    <div class="plan-cards">
+      <div class="card">
+        <h3>Starter Node</h3>
+        <ul>
+          <li>2GB RAM</li>
+          <li>40% CPU</li>
+          <li>6GB SSD Storage</li>
+          <li>DDoS Protection</li>
+          <li>Instant Setup</li>
+          <li>Free Subdomain</li>
+        </ul>
+        <a href="https://discord.gg/Hd8eedhS" target="_blank">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <h3>Pro Node</h3>
+        <ul>
+          <li>4GB RAM</li>
+          <li>80% CPU</li>
+          <li>15GB SSD</li>
+          <li>Full Access</li>
+          <li>Free Subdomain</li>
+        </ul>
+        <a href="https://discord.gg/Hd8eedhS" target="_blank">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <h3>Elite Node</h3>
+        <ul>
+          <li>8GB RAM</li>
+          <li>160% CPU</li>
+          <li>30GB SSD</li>
+          <li>Premium Support</li>
+          <li>Instant Setup</li>
+        </ul>
+        <a href="https://discord.gg/Hd8eedhS" target="_blank">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About BlazeNode</h2>
+    <p style="max-width:700px; margin:20px auto; color:#ccc;">
+      BlazeNode delivers cutting-edge hosting performance for gamers who demand speed, stability, and value. 
+      Built by gamers, for gamers – with lightning-fast servers, reliable uptime, and an ever-growing community.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      <a href="#hero">Home</a> • 
+      <a href="#plans">Plans</a> • 
+      <a href="#about">About</a> • 
+      <a href="https://discord.gg/Hd8eedhS" target="_blank">Discord</a>
+    </p>
+    <p>© 2025 BlazeNode. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
